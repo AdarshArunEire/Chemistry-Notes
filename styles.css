@@ -69,8 +69,8 @@ html[data-dark="true"] .badge.neutral{background:color-mix(in srgb,var(--primary
 
 /* ═══ BASE ═══ */
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;overflow-x:hidden}
-body{margin:0;font-family:var(--font-sans);font-size:15px;color:var(--text);background:var(--bg);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden;
+html{scroll-behavior:smooth;overflow-x:clip}
+body{margin:0;font-family:var(--font-sans);font-size:15px;color:var(--text);background:var(--bg);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:clip;
   transition:background-color .35s ease,color .35s ease}
 .panel,.check-item,.note-card,.zone,.diagram-box,.lc-box,.rxn-box,.callout,.defn,.note,.exam-tip,.result,.hero,.brand,.sidebar,.page-nav,.badge,.practice-card,.status-table,.struct-table,.sum-table,.summary-table,.info-table,.status-table th,.struct-table th,.sum-table th,.summary-table th,.info-table th,.status-table td,.struct-table td,.sum-table td,.summary-table td,.info-table td,h1,h2,h3,p,li,a,strong,.side-nav>a,.nav-group ul a,.nav-group summary,.content,.page-content{
   transition:background-color .35s ease,color .35s ease,border-color .35s ease,box-shadow .35s ease;
