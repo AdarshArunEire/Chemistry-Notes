@@ -137,7 +137,8 @@ h3{font-size:.82rem;color:var(--accent);text-transform:uppercase;letter-spacing:
 /* PANELS & CARDS */
 .panel,.check-item,.note-card,.zone{background:var(--surface);border:1.5px solid var(--border);border-radius:18px;padding:20px 22px;max-width:100%;overflow-wrap:break-word;word-wrap:break-word}
 .hero,.panel,.check-item,.note-card,.zone,.diagram-box,.lc-box,.rxn-box,.callout,.defn,.note,.exam-tip,.result{box-shadow:var(--shadow)}
-.note-card{transition:transform .28s cubic-bezier(.23,1,.32,1),box-shadow .28s ease !important}
+.note-card{transition:transform .28s cubic-bezier(.23,1,.32,1),box-shadow .28s ease !important;position:relative;cursor:pointer}
+.note-card h3 a::after{content:'';position:absolute;inset:0;z-index:1}
 .note-card:hover{transform:translateY(-4px) scale(1.005);box-shadow:0 20px 48px rgba(0,0,0,.12) !important}
 .practice-card{background:var(--surface);border:1.5px solid var(--border);border-radius:18px;padding:18px 20px;box-shadow:var(--shadow);transition:transform .28s cubic-bezier(.23,1,.32,1),box-shadow .28s ease,border-color .28s ease !important;max-width:100%;overflow-wrap:break-word}
 .practice-card:hover{transform:translateY(-3px) scale(1.005);box-shadow:0 18px 44px rgba(0,0,0,.1) !important;border-color:var(--primary-2)}
