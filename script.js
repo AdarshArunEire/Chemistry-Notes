@@ -1,5 +1,5 @@
 (function(){
-  /* ACTIVE NAV LINK */
+  /* ═══ ACTIVE NAV LINK ═══ */
   const path = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.side-nav a').forEach(a => {
     const href = a.getAttribute('href') || '';
@@ -16,183 +16,184 @@
     });
   }
 
-  /* NAV TOGGLE */
+  /* ═══ NAV TOGGLE ═══ */
   const nav = document.querySelector('.page-nav, .sidebar');
   if(nav){
     const btn = document.createElement('button');
-    btn.className = 'nav-toggle';
-    btn.type = 'button';
-    btn.setAttribute('aria-label','Toggle left navigation');
+    btn.className = 'nav-toggle'; btn.type = 'button';
+    btn.setAttribute('aria-label','Toggle navigation');
     btn.textContent = '☰';
     btn.addEventListener('click', () => {
       document.body.classList.toggle('nav-collapsed');
-      try { localStorage.setItem('chem-nav-collapsed', document.body.classList.contains('nav-collapsed') ? '1' : '0'); } catch(e) {}
+      try { localStorage.setItem('chem-nav', document.body.classList.contains('nav-collapsed') ? '1' : '0'); } catch(e){}
     });
     document.body.appendChild(btn);
-    try {
-      if(localStorage.getItem('chem-nav-collapsed') === '1') document.body.classList.add('nav-collapsed');
-    } catch(e) {}
+    try { if(localStorage.getItem('chem-nav') === '1') document.body.classList.add('nav-collapsed'); } catch(e){}
   }
 
-  /* THEME TOGGLE — now with 4 themes + Focus mode */
-  const themes = [
-    {id:'classic', label:'Classic'},
-    {id:'editorial', label:'Editorial'},
-    {id:'study', label:'Study'},
-    {id:'darklab', label:'Dark Lab'}
-  ];
+  /* ═══ STATE ═══ */
   const root = document.documentElement;
-  let current = 'editorial';
-  try { current = localStorage.getItem('chem-theme') || 'editorial'; } catch(e) {}
-  if(!themes.some(t => t.id === current)) current = 'editorial';
-  root.setAttribute('data-theme', current);
+  let theme = 'editorial', dark = false, focus = false;
+  try { theme = localStorage.getItem('chem-theme') || 'editorial'; } catch(e){}
+  try { dark = localStorage.getItem('chem-dark') === '1'; } catch(e){}
+  try { focus = localStorage.getItem('chem-focus') === '1'; } catch(e){}
+  if(!['classic','editorial','study'].includes(theme)) theme = 'editorial';
 
-  const switcher = document.createElement('div');
-  switcher.className = 'theme-switcher';
-  const label = document.createElement('span');
-  label.className = 'label';
-  label.textContent = 'Style';
-  switcher.appendChild(label);
-
-  const setTheme = (id) => {
-    root.setAttribute('data-theme', id);
-    try { localStorage.setItem('chem-theme', id); } catch(e) {}
-    switcher.querySelectorAll('.theme-btn').forEach(btn => btn.setAttribute('aria-pressed', btn.dataset.theme === id ? 'true' : 'false'));
-  };
-
-  themes.forEach(theme => {
-    const btn = document.createElement('button');
-    btn.className = 'theme-btn';
-    btn.type = 'button';
-    btn.dataset.theme = theme.id;
-    btn.setAttribute('aria-pressed', theme.id === current ? 'true' : 'false');
-    btn.textContent = theme.label;
-    btn.addEventListener('click', () => setTheme(theme.id));
-    switcher.appendChild(btn);
-  });
-
-  /* FOCUS MODE TOGGLE */
-  let focusOn = false;
-  try { focusOn = localStorage.getItem('chem-focus') === '1'; } catch(e) {}
-  if(focusOn) root.setAttribute('data-mode', 'focus');
-
-  const focusBtn = document.createElement('button');
-  focusBtn.className = 'focus-btn';
-  focusBtn.type = 'button';
-  focusBtn.textContent = 'Focus';
-  focusBtn.setAttribute('aria-pressed', focusOn ? 'true' : 'false');
-  focusBtn.addEventListener('click', () => {
-    focusOn = !focusOn;
-    if(focusOn){
-      root.setAttribute('data-mode', 'focus');
-    } else {
-      root.removeAttribute('data-mode');
+  function applyState(){
+    root.setAttribute('data-theme', theme);
+    if(dark) root.setAttribute('data-dark','true'); else root.removeAttribute('data-dark');
+    if(focus) root.setAttribute('data-focus','true'); else root.removeAttribute('data-focus');
+    try {
+      localStorage.setItem('chem-theme', theme);
+      localStorage.setItem('chem-dark', dark ? '1' : '0');
+      localStorage.setItem('chem-focus', focus ? '1' : '0');
+    } catch(e){}
+    // Update button states
+    document.querySelectorAll('.s-theme').forEach(b => b.setAttribute('aria-pressed', b.dataset.theme === theme ? 'true' : 'false'));
+    const darkBtn = document.querySelector('.s-dark');
+    if(darkBtn){
+      darkBtn.setAttribute('aria-pressed', dark ? 'true' : 'false');
+      darkBtn.querySelector('.s-icon').textContent = dark ? '☀️' : '🌙';
+      darkBtn.querySelector('.s-text').textContent = dark ? 'Light' : 'Dark';
     }
-    focusBtn.setAttribute('aria-pressed', focusOn ? 'true' : 'false');
-    try { localStorage.setItem('chem-focus', focusOn ? '1' : '0'); } catch(e) {}
+    const focusBtn = document.querySelector('.s-focus');
+    if(focusBtn) focusBtn.setAttribute('aria-pressed', focus ? 'true' : 'false');
+  }
+
+  /* ═══ COMPACT SETTINGS DROPDOWN ═══ */
+  // Gear button
+  const trigger = document.createElement('button');
+  trigger.className = 'settings-trigger'; trigger.type = 'button';
+  trigger.setAttribute('aria-label','Settings');
+  trigger.innerHTML = '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>';
+
+  // Dropdown panel
+  const panel = document.createElement('div');
+  panel.className = 'settings-panel';
+  panel.innerHTML = `
+    <div class="settings-section">
+      <div class="settings-label">Style</div>
+      <div class="settings-row">
+        <button class="s-btn s-theme" data-theme="classic" type="button">Classic</button>
+        <button class="s-btn s-theme" data-theme="editorial" type="button">Editorial</button>
+        <button class="s-btn s-theme" data-theme="study" type="button">Study</button>
+      </div>
+    </div>
+    <div class="settings-section">
+      <div class="settings-label">Mode</div>
+      <div class="settings-row">
+        <button class="s-toggle s-dark" type="button" aria-pressed="false">
+          <span class="s-text">Dark</span><span class="s-icon">🌙</span>
+        </button>
+      </div>
+    </div>
+    <div class="settings-section">
+      <div class="settings-label">Reading</div>
+      <div class="settings-row">
+        <button class="s-toggle s-focus" type="button" aria-pressed="false">
+          <span>Focus</span><span class="s-icon">📖</span>
+        </button>
+      </div>
+    </div>
+  `;
+
+  // Click-outside overlay
+  const overlay = document.createElement('div');
+  overlay.className = 'settings-overlay';
+
+  let panelOpen = false;
+  function togglePanel(){
+    panelOpen = !panelOpen;
+    panel.classList.toggle('open', panelOpen);
+    overlay.classList.toggle('open', panelOpen);
+  }
+  trigger.addEventListener('click', (e) => { e.stopPropagation(); togglePanel(); });
+  overlay.addEventListener('click', () => { if(panelOpen) togglePanel(); });
+
+  document.body.appendChild(overlay);
+  document.body.appendChild(trigger);
+  document.body.appendChild(panel);
+
+  // Theme buttons
+  panel.querySelectorAll('.s-theme').forEach(btn => {
+    btn.addEventListener('click', () => { theme = btn.dataset.theme; applyState(); });
   });
-  switcher.appendChild(focusBtn);
+  // Dark toggle
+  panel.querySelector('.s-dark').addEventListener('click', () => { dark = !dark; applyState(); });
+  // Focus toggle
+  panel.querySelector('.s-focus').addEventListener('click', () => { focus = !focus; applyState(); });
 
-  document.body.appendChild(switcher);
-  setTheme(current);
+  applyState();
 
-  /* READING PROGRESS BAR */
+  /* ═══ READING PROGRESS BAR ═══ */
   const progressBar = document.createElement('div');
   progressBar.className = 'reading-progress';
   document.body.appendChild(progressBar);
-
   function updateProgress(){
-    const scrollTop = window.scrollY || document.documentElement.scrollTop;
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    if(docHeight > 0){
-      const pct = Math.min((scrollTop / docHeight) * 100, 100);
-      progressBar.style.width = pct + '%';
-    }
+    const st = window.scrollY || document.documentElement.scrollTop;
+    const dh = document.documentElement.scrollHeight - window.innerHeight;
+    if(dh > 0) progressBar.style.width = Math.min((st/dh)*100,100)+'%';
   }
   window.addEventListener('scroll', updateProgress, {passive:true});
   updateProgress();
 
-  /* SCROLL-REVEAL ANIMATIONS */
-  const revealTargets = [
-    '.panel', '.note-card', '.practice-card', '.diagram-box',
-    '.defn', '.note', '.exam-tip', '.result', '.callout',
-    '.rxn-box', '.lc-box', '.cover',
-    '.status-table', '.struct-table', '.sum-table', '.summary-table', '.info-table'
-  ].join(',');
-
-  document.querySelectorAll(revealTargets).forEach(el => {
-    el.classList.add('reveal');
-  });
-
+  /* ═══ SCROLL-REVEAL ═══ */
+  const revealTargets = '.panel,.note-card,.practice-card,.diagram-box,.defn,.note,.exam-tip,.result,.callout,.rxn-box,.lc-box,.cover,.status-table,.struct-table,.sum-table,.summary-table,.info-table';
+  document.querySelectorAll(revealTargets).forEach(el => el.classList.add('reveal'));
   if('IntersectionObserver' in window){
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
-          entry.target.classList.add('revealed');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('revealed'); obs.unobserve(e.target); }});
+    }, {threshold:.08, rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
   } else {
     document.querySelectorAll('.reveal').forEach(el => el.classList.add('revealed'));
   }
 
-  /* BACK TO TOP BUTTON */
+  /* ═══ BACK TO TOP ═══ */
   const topBtn = document.createElement('button');
-  topBtn.className = 'back-to-top';
-  topBtn.type = 'button';
-  topBtn.setAttribute('aria-label', 'Back to top');
+  topBtn.className = 'back-to-top'; topBtn.type = 'button';
+  topBtn.setAttribute('aria-label','Back to top');
   topBtn.innerHTML = '<svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"></polyline></svg>';
-  topBtn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
+  topBtn.addEventListener('click', () => window.scrollTo({top:0,behavior:'smooth'}));
   document.body.appendChild(topBtn);
-
-  function updateTopBtn(){
-    if(window.scrollY > 400) topBtn.classList.add('visible');
-    else topBtn.classList.remove('visible');
-  }
+  function updateTopBtn(){ topBtn.classList.toggle('visible', window.scrollY > 400); }
   window.addEventListener('scroll', updateTopBtn, {passive:true});
   updateTopBtn();
 
-  /* MOBILE: NAV LINK → AUTO-SCROLL TO CONTENT */
+  /* ═══ MOBILE: AUTO-SCROLL TO CONTENT ═══ */
   function isMobile(){ return window.innerWidth <= 900; }
-
   if(nav && isMobile()){
-    const contentArea = document.querySelector('.content, .page-content');
-    if(contentArea){
-      setTimeout(() => {
-        const navRect = nav.getBoundingClientRect();
-        if(navRect.height > 100 && !document.body.classList.contains('nav-collapsed')){
-          contentArea.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      }, 150);
-    }
+    const ca = document.querySelector('.content,.page-content');
+    if(ca) setTimeout(() => {
+      if(nav.getBoundingClientRect().height > 100 && !document.body.classList.contains('nav-collapsed'))
+        ca.scrollIntoView({behavior:'smooth',block:'start'});
+    }, 150);
   }
-
   if(nav){
     nav.querySelectorAll('a[href]').forEach(link => {
       link.addEventListener('click', () => {
         if(!isMobile()) return;
-        const href = link.getAttribute('href') || '';
-        const target = href.split('/').pop();
-        if(target !== path){
-          try { sessionStorage.setItem('chem-scroll-to-content', '1'); } catch(ex){}
-        }
+        const t = (link.getAttribute('href')||'').split('/').pop();
+        if(t !== path) try { sessionStorage.setItem('chem-scroll','1'); } catch(e){}
       });
     });
     try {
-      if(sessionStorage.getItem('chem-scroll-to-content') === '1' && isMobile()){
-        sessionStorage.removeItem('chem-scroll-to-content');
-        const contentArea = document.querySelector('.content, .page-content');
-        if(contentArea){
-          setTimeout(() => {
-            contentArea.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }, 250);
-        }
+      if(sessionStorage.getItem('chem-scroll') === '1' && isMobile()){
+        sessionStorage.removeItem('chem-scroll');
+        const ca = document.querySelector('.content,.page-content');
+        if(ca) setTimeout(() => ca.scrollIntoView({behavior:'smooth',block:'start'}), 250);
       }
-    } catch(ex){}
+    } catch(e){}
   }
+
+  /* ═══ WRAP TABLES FOR SCROLL ON MOBILE ═══ */
+  document.querySelectorAll('.status-table,.struct-table,.sum-table,.summary-table,.info-table').forEach(table => {
+    if(table.parentElement && table.parentElement.classList.contains('struct-table-wrap')) return;
+    const wrap = document.createElement('div');
+    wrap.style.cssText = 'overflow-x:auto;-webkit-overflow-scrolling:touch;margin:18px 0';
+    table.parentNode.insertBefore(wrap, table);
+    wrap.appendChild(table);
+    table.style.margin = '0';
+  });
 
 })();
