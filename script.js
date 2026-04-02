@@ -1,7 +1,5 @@
 (function(){
-  /* ═══════════════════════════════════════════
-     ACTIVE NAV LINK
-     ═══════════════════════════════════════════ */
+  /* ACTIVE NAV LINK */
   const path = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.side-nav a').forEach(a => {
     const href = a.getAttribute('href') || '';
@@ -18,9 +16,7 @@
     });
   }
 
-  /* ═══════════════════════════════════════════
-     NAV TOGGLE
-     ═══════════════════════════════════════════ */
+  /* NAV TOGGLE */
   const nav = document.querySelector('.page-nav, .sidebar');
   if(nav){
     const btn = document.createElement('button');
@@ -38,13 +34,12 @@
     } catch(e) {}
   }
 
-  /* ═══════════════════════════════════════════
-     THEME TOGGLE
-     ═══════════════════════════════════════════ */
+  /* THEME TOGGLE — now with 4 themes + Focus mode */
   const themes = [
     {id:'classic', label:'Classic'},
     {id:'editorial', label:'Editorial'},
-    {id:'study', label:'Study'}
+    {id:'study', label:'Study'},
+    {id:'darklab', label:'Dark Lab'}
   ];
   const root = document.documentElement;
   let current = 'editorial';
@@ -75,12 +70,33 @@
     btn.addEventListener('click', () => setTheme(theme.id));
     switcher.appendChild(btn);
   });
+
+  /* FOCUS MODE TOGGLE */
+  let focusOn = false;
+  try { focusOn = localStorage.getItem('chem-focus') === '1'; } catch(e) {}
+  if(focusOn) root.setAttribute('data-mode', 'focus');
+
+  const focusBtn = document.createElement('button');
+  focusBtn.className = 'focus-btn';
+  focusBtn.type = 'button';
+  focusBtn.textContent = 'Focus';
+  focusBtn.setAttribute('aria-pressed', focusOn ? 'true' : 'false');
+  focusBtn.addEventListener('click', () => {
+    focusOn = !focusOn;
+    if(focusOn){
+      root.setAttribute('data-mode', 'focus');
+    } else {
+      root.removeAttribute('data-mode');
+    }
+    focusBtn.setAttribute('aria-pressed', focusOn ? 'true' : 'false');
+    try { localStorage.setItem('chem-focus', focusOn ? '1' : '0'); } catch(e) {}
+  });
+  switcher.appendChild(focusBtn);
+
   document.body.appendChild(switcher);
   setTheme(current);
 
-  /* ═══════════════════════════════════════════
-     READING PROGRESS BAR
-     ═══════════════════════════════════════════ */
+  /* READING PROGRESS BAR */
   const progressBar = document.createElement('div');
   progressBar.className = 'reading-progress';
   document.body.appendChild(progressBar);
@@ -96,9 +112,7 @@
   window.addEventListener('scroll', updateProgress, {passive:true});
   updateProgress();
 
-  /* ═══════════════════════════════════════════
-     SCROLL-REVEAL ANIMATIONS
-     ═══════════════════════════════════════════ */
+  /* SCROLL-REVEAL ANIMATIONS */
   const revealTargets = [
     '.panel', '.note-card', '.practice-card', '.diagram-box',
     '.defn', '.note', '.exam-tip', '.result', '.callout',
@@ -106,7 +120,6 @@
     '.status-table', '.struct-table', '.sum-table', '.summary-table', '.info-table'
   ].join(',');
 
-  // Add reveal class to all targets
   document.querySelectorAll(revealTargets).forEach(el => {
     el.classList.add('reveal');
   });
@@ -120,16 +133,12 @@
         }
       });
     }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
-
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   } else {
-    // Fallback: just show everything
     document.querySelectorAll('.reveal').forEach(el => el.classList.add('revealed'));
   }
 
-  /* ═══════════════════════════════════════════
-     BACK TO TOP BUTTON
-     ═══════════════════════════════════════════ */
+  /* BACK TO TOP BUTTON */
   const topBtn = document.createElement('button');
   topBtn.className = 'back-to-top';
   topBtn.type = 'button';
@@ -141,32 +150,20 @@
   document.body.appendChild(topBtn);
 
   function updateTopBtn(){
-    if(window.scrollY > 400){
-      topBtn.classList.add('visible');
-    } else {
-      topBtn.classList.remove('visible');
-    }
+    if(window.scrollY > 400) topBtn.classList.add('visible');
+    else topBtn.classList.remove('visible');
   }
   window.addEventListener('scroll', updateTopBtn, {passive:true});
   updateTopBtn();
 
-  /* ═══════════════════════════════════════════
-     MOBILE: NAV LINK CLICK → AUTO-SCROLL TO CONTENT
-     On small screens, after clicking a nav link on the
-     SAME page (or when the nav sits on top of content),
-     scroll down so the user sees the notes.
-     ═══════════════════════════════════════════ */
+  /* MOBILE: NAV LINK → AUTO-SCROLL TO CONTENT */
   function isMobile(){ return window.innerWidth <= 900; }
 
   if(nav && isMobile()){
-    // On page load, if nav is visible and not collapsed, auto-scroll past it
-    // so the user sees the content area
     const contentArea = document.querySelector('.content, .page-content');
     if(contentArea){
-      // Small delay so the page finishes layout
       setTimeout(() => {
         const navRect = nav.getBoundingClientRect();
-        // If nav is visible and takes up space on screen
         if(navRect.height > 100 && !document.body.classList.contains('nav-collapsed')){
           contentArea.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
@@ -174,24 +171,17 @@
     }
   }
 
-  // For all nav links on mobile: after clicking, scroll to content
   if(nav){
     nav.querySelectorAll('a[href]').forEach(link => {
-      link.addEventListener('click', (e) => {
+      link.addEventListener('click', () => {
         if(!isMobile()) return;
-        // If it's a link to the current page (anchor or same page), scroll to content
         const href = link.getAttribute('href') || '';
         const target = href.split('/').pop();
-        
-        // If navigating to a different page, we let the navigation happen
-        // but set a flag so the new page scrolls down on load
         if(target !== path){
           try { sessionStorage.setItem('chem-scroll-to-content', '1'); } catch(ex){}
         }
       });
     });
-
-    // Check if we should scroll to content (came from a nav link on mobile)
     try {
       if(sessionStorage.getItem('chem-scroll-to-content') === '1' && isMobile()){
         sessionStorage.removeItem('chem-scroll-to-content');
