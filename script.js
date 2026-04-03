@@ -138,7 +138,7 @@
   updateProgress();
 
   /* ═══ SCROLL-REVEAL ═══ */
-  const revealTargets = '.panel,.note-card,.practice-card,.diagram-box,.defn,.note,.exam-tip,.result,.callout,.rxn-box,.lc-box,.cover,.status-table,.struct-table,.sum-table,.summary-table,.info-table';
+  const revealTargets = '.note-card,.practice-card,.diagram-box,.defn,.note,.exam-tip,.result,.callout,.rxn-box,.lc-box,.cover,.status-table,.struct-table,.sum-table,.summary-table,.info-table';
   document.querySelectorAll(revealTargets).forEach(el => el.classList.add('reveal'));
   if('IntersectionObserver' in window){
     const obs = new IntersectionObserver(entries => {
