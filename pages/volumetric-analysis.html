@@ -1,278 +1,499 @@
 <!DOCTYPE html>
-
-<html data-theme="editorial" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Volumetric Analysis</title><link href="../styles.css" rel="stylesheet"/></head><body><div class="page-layout"><aside class="page-nav"><div class="brand"><a href="../index.html">LC Chemistry Notes</a><p>Higher Level Notes</p></div><nav class="side-nav"><a href="../index.html">← Back to home</a><details class="nav-group" open=""><summary>Atomic Theory 1–10</summary><ul><li><a href="atomic-1-periodic-table.html">Atomic Theory 1 — Periodic Table</a></li><li><a href="atomic-2-formulas.html">Atomic Theory 2 — Formulas</a></li><li><a href="atomic-3-history-atom-periodic-table.html">Atomic Theory 3 — History of the Atom &amp; Periodic Table</a></li><li><a href="atomic-4-radioactivity.html">Atomic Theory 4 — Radioactivity</a></li><li><a href="atomic-5-bohr-spectrum-electron-configs.html">Atomic Theory 5 — Bohr, Spectra, Configurations</a></li><li><a href="atomic-6-mass-spectrometer.html">Atomic Theory 6 — Mass Spectrometer</a></li><li><a href="atomic-7-ionisation-energy.html">Atomic Theory 7 — Ionisation Energy</a></li><li><a href="atomic-8-atomic-radius-electronegativity-ionic.html">Atomic Theory 8 — Radius, Electronegativity, Ionic Bonding</a></li><li><a href="atomic-9-covalent-sigma-pi-dative.html">Atomic Theory 9 — Covalent, Sigma/Pi, Dative</a></li><li><a href="atomic-10-intermolecular-forces.html">Atomic Theory 10 — Intermolecular Forces</a></li></ul></details><details class="nav-group" open=""><summary>Organic Chemistry 1–10</summary><ul><li><a href="organic-1-alkanes-alkenes-alkynes.html">Organic 1 — Alkanes, Alkenes, Alkynes</a></li><li><a href="organic-2-crude-oil-ethene-ethyne.html">Organic 2 — Crude Oil, Ethene, Ethyne</a></li><li><a href="organic-3-chloroalkanes-alcohols.html">Organic 3 — Chloroalkanes &amp; Alcohols</a></li><li><a href="organic-4-aldehydes-ketones-carboxylic-acids-esters.html">Organic 4 — Aldehydes, Ketones, Carboxylic Acids &amp; Esters</a></li><li><a href="organic-5-ionic-addition-free-radical-polymerisation.html">Organic 5 — Ionic Addition, Free Radical Substitution, Polymerisation</a></li><li><a href="organic-6-benzene-clove-oil.html">Organic 6 — Benzene, Steam Distillation, Clove Oil</a></li><li><a href="organic-7-elimination-redox-reduction-synthesis.html">Organic 7 — Elimination, Redox, Reduction, Synthesis</a></li><li><a href="organic-8-saponification-soap.html">Organic 8 — Esterification, Hydrolysis, Soap</a></li><li><a href="organic-9-chromatography-instruments-recrystallisation.html">Organic 9 — Chromatography, Instruments, Recrystallisation</a></li><li><a href="organic-10-benzoic-acid.html">Organic 10 — Preparation of Benzoic Acid</a></li></ul></details><details class="nav-group" open=""><summary>Stoichiometry</summary><ul><li><a href="stoich-1-mole-avogadro-molar-mass.html">Stoichiometry 1 — Mole, Avogadro, Molar Mass</a></li><li><a href="stoich-2-empirical-molecular-formula.html">Stoichiometry 2 — Empirical &amp; Molecular Formula</a></li><li><a href="stoich-3-percentage-composition.html">Stoichiometry 3 — Percentage Composition by Mass</a></li><li><a href="stoich-4-balanced-equations-yield-limiting.html">Stoichiometry 4 — Balanced Equations, Limiting Reactant, Yield</a></li></ul></details><details class="nav-group" open=""><summary>Acids &amp; Bases</summary><ul><li><a href="acids-bases.html">Acids &amp; Bases</a></li></ul></details><details class="nav-group" open=""><summary>Anion Tests</summary><ul><li><a href="anion-tests.html">Anion Tests</a></li></ul></details><details class="nav-group" open=""><summary>Chemical Equilibrium</summary><ul><li><a href="equilibrium.html">Chemical Equilibrium</a></li></ul></details><details class="nav-group" open=""><summary>Oxidation &amp; Reduction</summary><ul><li><a href="redox-oxidation-reduction.html">Oxidation &amp; Reduction</a></li></ul></details><details class="nav-group" open=""><summary>pH &amp; Indicators</summary><ul><li><a href="ph-and-indicators.html">pH &amp; Indicators</a></li></ul></details><details class="nav-group" open=""><summary>Rates of Reaction</summary><ul><li><a href="rates-of-reaction.html">Rates of Reaction</a></li></ul></details><details class="nav-group" open=""><summary>Shapes of Molecules</summary><ul><li><a href="shapes-of-molecules.html">Shapes of Molecules</a></li></ul></details><details class="nav-group" open=""><summary>Definitions</summary><ul><li><a href="definitions-glossary.html">Definitions Glossary</a></li></ul></details><details class="nav-group" open=""><summary>Electrochemistry</summary><ul><li><a href="electrochemistry.html">Electrochemistry</a></li></ul></details><details class="nav-group" open=""><summary>Gas Laws</summary><ul><li><a href="gas-laws.html">Gas Laws</a></li></ul></details><details class="nav-group" open=""><summary>Thermochemistry</summary><ul><li><a href="thermochemistry.html">Thermochemistry</a></li></ul></details><details class="nav-group" open=""><summary>Volumetric Analysis</summary><ul><li><a href="volumetric-analysis.html">Volumetric Analysis</a></li></ul></details><details class="nav-group" open=""><summary>Water</summary><ul><li><a href="water.html">Water</a></li></ul></details></nav></aside><main class="page-content">
-<div class="page-topbar"><div><p class="eyebrow">Volumetric Analysis</p><h1>Volumetric Analysis</h1></div></div>
-
-<section class="panel"><h2>At a glance</h2>
-<div class="diagram-box"><h3>Core titration logic</h3>
-<svg height="150" viewBox="0 0 640 150" xmlns="http://www.w3.org/2000/svg"><rect fill="#d6e4f7" height="72" rx="12" stroke="#1a3a6b" stroke-width="2" width="150" x="20" y="35"/><text font-size="13" font-weight="bold" text-anchor="middle" x="95" y="58">Known solution</text><text font-size="11" text-anchor="middle" x="95" y="78">standard / standardised</text><text font-size="11" text-anchor="middle" x="95" y="96">in pipette or burette</text><rect fill="#fff3cd" height="72" rx="12" stroke="#f4a261" stroke-width="2" width="150" x="245" y="35"/><text font-size="13" font-weight="bold" text-anchor="middle" x="320" y="58">Balanced equation</text><text font-size="11" text-anchor="middle" x="320" y="78">gives reacting ratio</text><text font-size="11" text-anchor="middle" x="320" y="96">n₁ : n₂</text><rect fill="#d8f3dc" height="72" rx="12" stroke="#2d6a4f" stroke-width="2" width="150" x="470" y="35"/><text font-size="13" font-weight="bold" text-anchor="middle" x="545" y="58">Unknown solution</text><text font-size="11" text-anchor="middle" x="545" y="78">find concentration</text><text font-size="11" text-anchor="middle" x="545" y="96">from average titre</text><path d="M170 71 H245" fill="none" marker-end="url(#arrv)" stroke="#555" stroke-width="3"/><path d="M395 71 H470" fill="none" marker-end="url(#arrv)" stroke="#555" stroke-width="3"/><defs><marker id="arrv" markerHeight="6" markerWidth="7" orient="auto" refX="6" refY="3"><path d="M0,0 L0,6 L7,3 z" fill="#555"/></marker></defs></svg>
-<div class="caption">The key pattern uses the same four inputs: known concentration, two measured volumes, a balanced equation, and an average titre. This topic is a definite question in section A of the exam (Q1).</div>
-</div>
-</section>
-
-<section class="panel exact-import"><h2>Notes</h2><div class="exact-body">
-
-<h2>What volumetric analysis is</h2>
-<p>Volumetric analysis involves reacting two solutions together to find the concentration of one of them. To know the concentration of a solution you need two pieces of information (1) the amount of solute and (2) the amount of solution. Only the solutes of each solution react with each other — the solvent does not react.</p>
-<p>A solution is made up of two parts, a solute and a solvent. In all of the experiments in this part of the course the solvent is water. The solute is either in solid form (e.g. sodium carbonate, iron tablets, sodium thiosulfate crystals) or in liquid form (e.g. vinegar, bleach).</p>
-
-<div class="defn"><strong>Concentration of a solution</strong> – amount of solute per amount of solution.</div>
-
-<p>If there is a high proportion of solute to solvent the solution will be concentrated. If there is a low proportion of solute to solvent then the solution is said to be dilute.</p>
-
-<h2>Expressing concentrations</h2>
-
-<h3>% Weight per volume (% w/v)</h3>
-<p>Grams per 100 cm³. A solution of potassium iodide labelled 10% (w/v) means that there is 10 grams of KI per 100 cm³ of solution. To make this solution you would weigh out 10g of KI and add water until the volume of the solution is 100 cm³.</p>
-
-<h3>% Weight per weight (% w/w)</h3>
-<p>Grams per 100 grams. A solution labelled 10% (w/w) of sodium chloride means that there are 10 grams of NaCl per 100 grams of solution.</p>
-
-<h3>% Volume per volume (% v/v)</h3>
-<p>cm³ per 100 cm³. A solution of ethanol labelled 12% (v/v) means that 12 cm³ ethanol was measured out and water was added until the total volume of the solution is 100 cm³.</p>
-
-<div class="note"><strong>Social and applied aspect:</strong> the amount of alcohol in alcoholic drinks is often given as % (v/v), i.e. beer is about 4% (v/v) whereas gin or vodka usually have an alcohol content of about 40% (v/v).</div>
-
-<h3>Parts per million (ppm)</h3>
-<p>These units are usually used to describe very small concentrations. 1 ppm = 1 mg per litre. This unit of concentration appears when doing experiments in the Water chapter.</p>
-
-<h3>Molarity (moles per litre)</h3>
-<p>The usual way of expressing the concentration of a solution is in moles per litre. This is known as the molarity. A 1 molar solution contains 1 mole of the substance (solute) made up to 1 litre of solution.</p>
-<p>Therefore a 1 M solution of sodium hydroxide, NaOH, contains 1 mole of NaOH per litre, or 40g of NaOH per litre of solution (as 40 is the M<sub>r</sub> of NaOH). Whereas a 0.5 M solution of NaOH contains 20g of NaOH per litre of solution.</p>
-
-<h3>Dilution</h3>
-<p>When solutions are made in the lab for storage and further use, the solutions are usually concentrated. These solutions are called stock solutions. When a solution of a particular concentration is then required the stock solution is diluted.</p>
-<div class="note"><strong>Key point:</strong> add water and you do dilute the solution, you do change the concentration of the solution but you do NOT change the moles of solute in the solution.</div>
-<div class="rxn-box">C₁V₁ = C₂V₂</div>
-
-<h2>Colour intensity and colorimetry</h2>
-<p>Some compounds such as potassium manganate(VII) are highly coloured. KMnO₄ is a deep purple colour due to the presence of Mn(+7). When crystals of KMnO₄ are dissolved in a little water the resulting solution is a deep purple colour. However, as more water is added, the colour becomes lighter. The colour intensity is dependent on the concentration. Colour intensity (hence concentration of solute) can be measured using an instrument called a <strong>colorimeter</strong>. The technique is called <strong>colorimetry</strong>.</p>
-
-<hr class="divider">
-
-<h2>Standard solutions and primary standards</h2>
-<p>There will always be one standard solution in any titration. This is the one whose concentration is given to you in the question.</p>
-<p>Most standard solutions are made from primary standards. An exact amount of the primary standard is weighed out accurately and made up to a known volume in a volumetric flask following certain procedures. As we know the amount of primary standard (solute) and the volume (of solution) used we can calculate the molarity of the solution directly — a titration is not needed to find its concentration, hence it is a standard solution.</p>
-
-<div class="defn"><strong>Primary standards used in this syllabus:</strong> Anhydrous sodium carbonate, Na₂CO₃ (base) and ammonium iron(II) sulfate (reducing agent).</div>
-
-<div class="defn"><strong>Secondary standards used in this syllabus:</strong>
-<ul>
-<li><strong>NaOH</strong> — it is deliquescent (absorbs moisture from the air)</li>
-<li><strong>KMnO₄</strong> — it decomposes in strong sunlight and is easily reduced, and does not dissolve readily in water</li>
-<li><strong>I₂</strong> — it undergoes sublimation (changes from solid to gas without going through the liquid stage, hence not stable in air)</li>
-<li><strong>Na₂S₂O₃</strong> — it is not available in 100% purity</li>
-</ul>
-</div>
-
-<hr class="divider">
-
-<h2>General practical procedures</h2>
-
-<h3>Preparing a solution (in a volumetric flask)</h3>
-<ol>
-<li>The solute (if solid) is weighed accurately on a clock glass using an electronic balance.</li>
-<li>All of the solute must be transferred to a volumetric flask and made up to an accurately known volume e.g. 250 cm³ so that (a) the concentration can be calculated and (b) there is enough solution to carry out at least 3 titrations.</li>
-<li>Solute, if solid, is first tipped into a beaker.</li>
-<li>Clock glass is washed several times with deionised water from a wash-bottle and the rinsings are added to the beaker and stirred with a clean dry glass rod until it dissolves.</li>
-<li>This solution is poured into the volumetric flask with the aid of a funnel to prevent spillage.</li>
-<li>The beaker, funnel and rod are rinsed several times with deionised water and the rinsings are added to the volumetric flask.</li>
-<li>The funnel is removed and deionised water is added to the flask until the level of the solution is 1 cm below the mark on the neck of the flask.</li>
-<li>Deionised water is then added drop by drop until the bottom of the meniscus is on the graduation mark and read at eye-level.</li>
-<li>The solution in the flask has a concentration gradient so the flask is stoppered, inverted 20–30 times and shaken to make the solution homogeneous.</li>
-</ol>
-<div class="note"><strong>Note:</strong> if the solute is in liquid form (vinegar or bleach) we use a properly rinsed pipette to measure out an exact volume, transfer to the volumetric flask by touching the tip to the inside of the flask and then continue as above.</div>
-<div class="note"><strong>Exam note:</strong> In step 9 always say <strong>stopper and invert 20–30 times</strong>. Marking schemes do not accept 'shake' on its own.</div>
-
-<h3>Pipette</h3>
-<ul>
-<li>Used for solutions at room temperature only, as liquids expand on heating and contract on cooling thereby giving inaccurate volumes.</li>
-<li>Before use the pipette is washed with deionised water to clean it, it is then rinsed with the solution it is to contain to prevent dilution of the solution.</li>
-<li>Liquid is drawn in using a pipette filler, as solutions may be poisonous, until the level of the liquid is above the mark on the stem of the pipette.</li>
-<li>The liquid is allowed to run out until the bottom of the meniscus is on the graduation mark and read at eye-level.</li>
-<li>The solution is transferred to the conical flask by touching the tip of the pipette against the inside of the flask — this ensures the exact volume is transferred.</li>
-<li>There will be a drop left — do not blow this out as it is accounted for in the calibration of the pipette.</li>
-</ul>
-
-<h3>Conical flask (titration flask)</h3>
-<ul>
-<li>Has a narrow neck to prevent spillage while swirling during the titration.</li>
-<li>Before use the flask is rinsed only with deionised water so that there is no change in the number of reacting moles of solute. If rinsed with the solution to contain there would be an unknown volume of solution in the conical flask and an unknown amount of solute.</li>
-<li>Flask is swirled continuously during titration.</li>
-<li>Drops high up on the flask from the burette can be rinsed down using deionised water from a wash bottle as this does not interfere with the number of reacting moles of solute — moles of solute after dilution equals moles of solute before dilution.</li>
-<li>To observe the colour change a white surface should be placed under the conical flask.</li>
-</ul>
-
-<h3>Burette</h3>
-<ul>
-<li>Used for solutions at room temperature.</li>
-<li>The burette measures to 0.1 cm³ accuracy — its narrowness allows the meniscus to be observed clearly.</li>
-<li>The burette is clamped vertically using a retort stand to prevent parallax error.</li>
-<li>In acid–base titrations, the acid is usually placed in the burette, as bases will lead to the tap becoming clogged up (bases react with the glass components to form insoluble substances).</li>
-<li>Before use, it is rinsed with deionised water to clean it, then rinsed with the solution it is to contain to prevent a change in concentration.</li>
-<li>Use a funnel with the tap closed to fill above the 0 cm³ graduation mark. When full, the funnel must be removed as drops from the funnel will affect the volume in the burette.</li>
-<li>The tap is opened to ensure that the bit below the tap is full, so that the first volumes leaving the burette go directly into the conical flask.</li>
-<li>Readings are taken from the bottom of the meniscus except for KMnO₄ which is taken from the top of the meniscus due to its deep purple colour.</li>
-</ul>
-
-<hr class="divider">
-
-<h2>Experiment 1 — Preparing a standard solution of sodium carbonate</h2>
-<div class="result"><strong>Result:</strong> 2.65 g of Na₂CO₃ per 250 cm³. M<sub>r</sub> of Na₂CO₃ = 2(23) + 12 + 3(16) = 106. Concentration = 2.65 ÷ 106 = 0.025 mol per 250 cm³ = <strong>0.1 mol L⁻¹</strong>.</div>
-<div class="note"><strong>Note:</strong> this is not a titration. We are preparing a solution to use in a titration.</div>
-
-<hr class="divider">
-
-<h2>Experiment 2 — Standardisation of HCl using standard Na₂CO₃</h2>
-<div class="callout"><strong>Indicator:</strong> methyl orange (yellow in alkaline solution → pink at end-point)</div>
-<div class="rxn-box">2HCl + Na₂CO₃ → 2NaCl + H₂O + CO₂</div>
-
-<h3>Typical results</h3>
-<div class="struct-table-wrap"><table class="summary-table"><tr><th>Titration</th><th>Titre (cm³)</th></tr><tr><td>1st (Rough)</td><td>19.9</td></tr><tr><td>2nd</td><td>19.6</td></tr><tr><td>3rd</td><td>19.5</td></tr><tr><td><strong>Average</strong></td><td><strong>19.55</strong></td></tr></table></div>
-
-<h3>Calculation method</h3>
-<p>HCl: V₁ = 19.55 cm³, M₁ = x, n₁ = 2<br>
-Na₂CO₃: V₂ = 25 cm³, M₂ = 0.1 M, n₂ = 1</p>
-<ol>
-<li>Moles of Na₂CO₃ reacting = M₂ × V₂ / 1000 = 0.1 × 25 / 1000 = 0.0025 mol</li>
-<li>Moles of HCl = 0.0025 × (n₁/n₂) = 0.0025 × 2 = 0.005 mol</li>
-<li>Molarity of HCl = 0.005 / (19.55/1000) = <strong>0.256 M</strong></li>
-<li>Grams per litre: 0.256 × 36.5 = <strong>9.344 g L⁻¹</strong></li>
-</ol>
-
-<div class="exam-tip"><strong>Q: Why were only a few drops of indicator used?</strong><br>A: Indicators are themselves either weak acids or weak bases and will therefore take part in the titration thereby affecting the overall result. To minimise their taking part and having a significant effect, the smallest amount possible is used.</div>
-
-<hr class="divider">
-
-<h2>Experiment 3 — Water of crystallisation titration</h2>
-<p>We use the standardised HCl from Experiment 2 to determine the number of water of crystallisation molecules and % water of crystallisation in hydrated sodium carbonate crystals, Na₂CO₃·xH₂O.</p>
-
-<h3>Method for a water of crystallisation calculation</h3>
-<ol>
-<li>Solve for unknown molarity (M). Answer is always in moles per litre.</li>
-<li>See if a litre of solution was used. If not, adjust accordingly (e.g. if 250 cm³ used, divide by 4).</li>
-<li>Multiply by M<sub>r</sub> of <strong>anhydrous</strong> form to get grams per volume. (Note: you cannot include the water of crystallisation in the M<sub>r</sub> as you do not know how many there are.)</li>
-<li>Subtract grams of anhydrous from grams of hydrated given in the question to get grams of water of crystallisation.</li>
-<li>To get % of water of crystallisation: (mass of water / mass of hydrated) × 100</li>
-<li>To solve for 'x' in the formula: (mass of water / 18) ÷ (mass of anhydrous / M<sub>r</sub> of anhydrous)</li>
-</ol>
-
-<h3>Worked example</h3>
-<p>4.3g of washing soda crystals (Na₂CO₃·xH₂O) were dissolved in water and the solution made up to 250 cm³. 25 cm³ of this solution required 15 cm³ of 0.2 M HCl for neutralisation.</p>
-<div class="rxn-box">2HCl + Na₂CO₃ → 2NaCl + H₂O + CO₂</div>
-<ol>
-<li>Moles of HCl = 0.2 × 15/1000 = 0.003 mol</li>
-<li>Moles of Na₂CO₃ = 0.003 / 2 = 0.0015 mol</li>
-<li>Molarity = 0.0015 / (25/1000) = 0.06 M</li>
-<li>Grams per litre = 0.06 × 106 = 6.36 g L⁻¹</li>
-<li>But only made 250 cm³, so divide by 4 = 1.59 g (mass of anhydrous)</li>
-<li>Mass of water = 4.30 − 1.59 = 2.71 g</li>
-<li><strong>% water of crystallisation</strong> = (2.71 / 4.30) × 100 = <strong>63.02%</strong></li>
-<li><strong>x</strong> = (2.71 / 18) ÷ (1.59 / 106) = 0.1506 / 0.015 = <strong>10</strong></li>
-</ol>
-
-<hr class="divider">
-
-<h2>Experiment 4 — Concentration of ethanoic acid in vinegar</h2>
-<div class="callout"><strong>This is a weak acid–strong base titration.</strong> Indicator: phenolphthalein (colourless → pink)</div>
-<div class="rxn-box">CH₃COOH + NaOH → CH₃COONa + H₂O</div>
-
-<div class="note"><strong>Why was the vinegar diluted?</strong> The vinegar was too concentrated and would require an excessive amount of sodium hydroxide to react with it.</div>
-
-<div class="note"><strong>Unusual setup:</strong> In this titration the acid (vinegar) is placed in the conical flask and the base (NaOH) is placed in the burette. This is because the colour change colourless → pink is easier to see than pink → colourless. If the base was in the conical flask the indicator would be pink and a pink to colourless change is more difficult to observe.</div>
-
-<hr class="divider">
-
-<h2>Experiment 5 — Standardisation of KMnO₄ (redox titration)</h2>
-
-<h3>Ammonium iron(II) sulfate — (NH₄)₂SO₄·FeSO₄·6H₂O</h3>
-<ul>
-<li>Is a primary standard, so can be used to standardise potassium manganate(VII).</li>
-<li>Pipetted into the conical flask.</li>
-<li>Fe²⁺ is easily oxidised to Fe³⁺ by atmospheric oxygen so ammonium iron(II) sulfate is used to prevent this from happening as it is quite stable in air.</li>
-<li>Its high molecular mass also ensures accuracy when weighing.</li>
-<li>Sulphuric acid is added to the volumetric flask to further prevent aerial oxidation of Fe²⁺ to Fe³⁺.</li>
-</ul>
-
-<h3>Potassium manganate(VII) — KMnO₄</h3>
-<ul>
-<li>Is an oxidising agent, so it itself is reduced in the reaction.</li>
-<li>Is a secondary standard as it decomposes in strong sunlight and is also easily reduced. It also does not dissolve easily in water.</li>
-<li>Is a deep purple colour due to Mn(+7).</li>
-<li>Is always placed in the burette.</li>
-<li>Titrations are always carried out in acidic conditions to ensure the complete reduction of Mn(+7) to Mn(+2). The sulfuric acid is added to the conical flask.</li>
-<li>The formation of Mn(+2) acts as an autocatalyst in the reaction.</li>
-<li>The colour change during the reaction is <strong>purple → colourless</strong>, as Mn(+7) is purple and Mn(+2) is colourless.</li>
-<li>If insufficient acid (H₂SO₄) is added to the conical flask the Mn(+7) is incompletely reduced to Mn(+4), which appears as a <strong>brown precipitate of MnO₂</strong>. To rectify this simply add more sulphuric acid.</li>
-<li>Neither HCl nor HNO₃ can be used to acidify the solution — HCl will be oxidised by the manganate(VII) solution and HNO₃ is itself a powerful oxidising agent that will take part in the reaction.</li>
-</ul>
-
-<div class="rxn-box">MnO₄⁻ + 5Fe²⁺ + 8H⁺ → Mn²⁺ + 5Fe³⁺ + 4H₂O</div>
-
-<div class="result"><strong>End-point:</strong> No indicator is needed as the manganate(VII) acts as its own indicator. The end-point is when the colourless solution in the conical flask retains a <strong>permanent pink tinge</strong>, as there are no more Fe²⁺ present to reduce the purple Mn(+7) to colourless Mn(+2).</div>
-
-<div class="exam-tip"><strong>Important:</strong> The potassium manganate(VII) solution should be used immediately in the next titration as it will decompose and its concentration will change, making the result of the next titration inaccurate.</div>
-
-<hr class="divider">
-
-<h2>Experiment 6 — Iron in iron tablets</h2>
-<p>This experiment involves the same chemistry as Experiment 5 — reacting potassium manganate(VII) with iron(II). This time the iron(II) is in the tablets in the form of iron(II) sulfate. You may be asked to calculate the iron(II) sulfate instead of just iron(II), so read carefully.</p>
-
-<div class="rxn-box">MnO₄⁻ + 5Fe²⁺ + 8H⁺ → Mn²⁺ + 5Fe³⁺ + 4H₂O</div>
-
-<div class="note"><strong>Why use 5 tablets?</strong> Using more tablets gives a larger mass to measure, reducing the percentage error in weighing. It also produces a solution with enough Fe²⁺ to give a measurable titre.</div>
-
-<div class="note"><strong>Why crush the tablets?</strong> Crushed tablets dissolve more quickly. A pestle and mortar is used with some dilute sulphuric acid to prevent aerial oxidation of the iron(II).</div>
-
-<hr class="divider">
-
-<h2>Experiment 7 — Iodometric titrations (sodium thiosulfate and iodine)</h2>
-
-<h3>Sodium thiosulfate — Na₂S₂O₃</h3>
-<ul>
-<li>Is a reducing agent, so it itself will be oxidised in the reaction.</li>
-<li>It reacts with iodine that has been liberated from solutions containing an excess of potassium iodide, KI.</li>
-<li>It is a secondary standard as it is not available in a pure state.</li>
-<li>It goes into the burette.</li>
-</ul>
-
-<h3>Iodine — I₂</h3>
-<ul>
-<li>It is insoluble in water as it is non-polar and water is a polar solvent.</li>
-<li>It undergoes sublimation at room temperature to a degree, hence it is a secondary standard as it is not stable in air.</li>
-<li>A standard solution of iodine is obtained by reacting a standard solution of KMnO₄ (oxidising agent) with excess potassium iodide, KI. It is important that the KI is in excess to (1) ensure that all the oxidising agent is reduced so that the maximum amount of iodine is released and (2) to keep iodine in aqueous solution.</li>
-</ul>
-
-<div class="rxn-box">I₂ + 2S₂O₃²⁻ → 2I⁻ + S₄O₆²⁻</div>
-
-<h3>The iodometric titration procedure</h3>
-<p>The sodium thiosulfate is placed in the burette. The iodine solution is placed in the conical flask — it is red/brown in colour due to the liberated iodine.</p>
-<ol>
-<li>Sodium thiosulfate is added until the solution in the conical flask becomes a <strong>straw-yellow colour</strong>.</li>
-<li>A few drops of starch indicator is then added, which in the presence of iodine turns from straw-yellow to <strong>blue-black</strong>. (If the starch were added before this stage the blue/black complex is too concentrated and too stable to decompose fast enough to give an accurate end-point.)</li>
-<li>More sodium thiosulfate is added until the blue-black colour becomes <strong>colourless</strong>. This indicates the end-point.</li>
-</ol>
-<div class="result"><strong>Colours in conical flask:</strong> red/brown → straw/yellow → blue/black (starch added) → colourless (end-point)</div>
-
-<hr class="divider">
-
-<h2>Experiment 8 — % (w/v) of hypochlorite in bleach</h2>
-<p>Bleach contains hypochlorite ions, ClO⁻, in the form of NaClO. The hypochlorite ion is an oxidising agent and liberates iodine from solutions of excess potassium iodide in a 1:1 ratio. The amount of hypochlorite ions can be calculated by reacting the liberated iodine with a previously standardised solution of sodium thiosulfate.</p>
-
-<div class="rxn-box">ClO⁻ + 2I⁻ + 2H⁺ → Cl⁻ + I₂ + H₂O</div>
-<div class="rxn-box">I₂ + 2S₂O₃²⁻ → 2I⁻ + S₄O₆²⁻</div>
-
-<div class="note"><strong>Why was the bleach diluted?</strong> The bleach was too concentrated and would require an excessive amount of sodium thiosulfate to react with the iodine that the bleach liberated.</div>
-
-<hr class="divider">
-
-<h2>Link to Water chapter</h2>
-<p>Two more titrations must also be studied — these are found in the Environmental Chemistry (Water) notes and must be studied to be fully prepared for this question in the Leaving Cert exam:</p>
-<ol>
-<li><strong>Determination of total hardness in a water sample using EDTA solution</strong></li>
-<li><strong>Estimation of the dissolved oxygen in a water sample using the Winkler method</strong></li>
-</ol>
-<p>These are on the separate <a href="water.html">Water page</a>.</p>
-
-</div></section>
-</main></div><script src="../script.js"></script></body></html>
+<html data-theme="editorial" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>Volumetric Analysis</title>
+  <link href="../styles.css" rel="stylesheet"/>
+</head>
+<body>
+  <div class="page-layout">
+    <aside class="page-nav">
+      <div class="brand">
+        <a href="../index.html">LC Chemistry Notes</a>
+        <p>Higher Level Notes</p>
+      </div>
+      <nav class="side-nav">
+        <a href="../index.html">← Back to home</a>
+        <details class="nav-group" open><summary>Atomic Theory 1–10</summary><ul>
+          <li><a href="atomic-1-periodic-table.html">Atomic Theory 1 — Periodic Table</a></li>
+          <li><a href="atomic-2-formulas.html">Atomic Theory 2 — Formulas</a></li>
+          <li><a href="atomic-3-history-atom-periodic-table.html">Atomic Theory 3 — History of the Atom &amp; Periodic Table</a></li>
+          <li><a href="atomic-4-radioactivity.html">Atomic Theory 4 — Radioactivity</a></li>
+          <li><a href="atomic-5-bohr-spectrum-electron-configs.html">Atomic Theory 5 — Bohr, Spectra, Configurations</a></li>
+          <li><a href="atomic-6-mass-spectrometer.html">Atomic Theory 6 — Mass Spectrometer</a></li>
+          <li><a href="atomic-7-ionisation-energy.html">Atomic Theory 7 — Ionisation Energy</a></li>
+          <li><a href="atomic-8-atomic-radius-electronegativity-ionic.html">Atomic Theory 8 — Radius, Electronegativity, Ionic Bonding</a></li>
+          <li><a href="atomic-9-covalent-sigma-pi-dative.html">Atomic Theory 9 — Covalent, Sigma/Pi, Dative</a></li>
+          <li><a href="atomic-10-intermolecular-forces.html">Atomic Theory 10 — Intermolecular Forces</a></li>
+        </ul></details>
+        <details class="nav-group" open><summary>Organic Chemistry 1–10</summary><ul>
+          <li><a href="organic-1-alkanes-alkenes-alkynes.html">Organic 1 — Alkanes, Alkenes, Alkynes</a></li>
+          <li><a href="organic-2-crude-oil-ethene-ethyne.html">Organic 2 — Crude Oil, Ethene, Ethyne</a></li>
+          <li><a href="organic-3-chloroalkanes-alcohols.html">Organic 3 — Chloroalkanes &amp; Alcohols</a></li>
+          <li><a href="organic-4-aldehydes-ketones-carboxylic-acids-esters.html">Organic 4 — Aldehydes, Ketones, Carboxylic Acids &amp; Esters</a></li>
+          <li><a href="organic-5-ionic-addition-free-radical-polymerisation.html">Organic 5 — Ionic Addition, Free Radical Substitution, Polymerisation</a></li>
+          <li><a href="organic-6-benzene-clove-oil.html">Organic 6 — Benzene, Steam Distillation, Clove Oil</a></li>
+          <li><a href="organic-7-elimination-redox-reduction-synthesis.html">Organic 7 — Elimination, Redox, Reduction, Synthesis</a></li>
+          <li><a href="organic-8-saponification-soap.html">Organic 8 — Esterification, Hydrolysis, Soap</a></li>
+          <li><a href="organic-9-chromatography-instruments-recrystallisation.html">Organic 9 — Chromatography, Instruments, Recrystallisation</a></li>
+          <li><a href="organic-10-benzoic-acid.html">Organic 10 — Preparation of Benzoic Acid</a></li>
+        </ul></details>
+        <details class="nav-group" open><summary>Stoichiometry</summary><ul>
+          <li><a href="stoich-1-mole-avogadro-molar-mass.html">Stoichiometry 1 — Mole, Avogadro, Molar Mass</a></li>
+          <li><a href="stoich-2-empirical-molecular-formula.html">Stoichiometry 2 — Empirical &amp; Molecular Formula</a></li>
+          <li><a href="stoich-3-percentage-composition.html">Stoichiometry 3 — Percentage Composition by Mass</a></li>
+          <li><a href="stoich-4-balanced-equations-yield-limiting.html">Stoichiometry 4 — Balanced Equations, Limiting Reactant, Yield</a></li>
+        </ul></details>
+        <details class="nav-group" open><summary>Acids &amp; Bases</summary><ul><li><a href="acids-bases.html">Acids &amp; Bases</a></li></ul></details>
+        <details class="nav-group" open><summary>Anion Tests</summary><ul><li><a href="anion-tests.html">Anion Tests</a></li></ul></details>
+        <details class="nav-group" open><summary>Chemical Equilibrium</summary><ul><li><a href="equilibrium.html">Chemical Equilibrium</a></li></ul></details>
+        <details class="nav-group" open><summary>Oxidation &amp; Reduction</summary><ul><li><a href="redox-oxidation-reduction.html">Oxidation &amp; Reduction</a></li></ul></details>
+        <details class="nav-group" open><summary>pH &amp; Indicators</summary><ul><li><a href="ph-and-indicators.html">pH &amp; Indicators</a></li></ul></details>
+        <details class="nav-group" open><summary>Rates of Reaction</summary><ul><li><a href="rates-of-reaction.html">Rates of Reaction</a></li></ul></details>
+        <details class="nav-group" open><summary>Shapes of Molecules</summary><ul><li><a href="shapes-of-molecules.html">Shapes of Molecules</a></li></ul></details>
+        <details class="nav-group" open><summary>Definitions</summary><ul><li><a href="definitions-glossary.html">Definitions Glossary</a></li></ul></details>
+        <details class="nav-group" open><summary>Electrochemistry</summary><ul><li><a href="electrochemistry.html">Electrochemistry</a></li></ul></details>
+        <details class="nav-group" open><summary>Gas Laws</summary><ul><li><a href="gas-laws.html">Gas Laws</a></li></ul></details>
+        <details class="nav-group" open><summary>Thermochemistry</summary><ul><li><a href="thermochemistry.html">Thermochemistry</a></li></ul></details>
+        <details class="nav-group" open><summary>Volumetric Analysis</summary><ul><li><a href="volumetric-analysis.html">Volumetric Analysis</a></li></ul></details>
+        <details class="nav-group" open><summary>Water</summary><ul><li><a href="water.html">Water</a></li></ul></details>
+      </nav>
+    </aside>
+
+    <main class="page-content">
+      <div class="page-topbar">
+        <div>
+          <p class="eyebrow">Volumetric Analysis</p>
+          <h1>Volumetric Analysis</h1>
+        </div>
+      </div>
+
+      <section class="panel">
+        <h2>At a glance</h2>
+        <div class="diagram-box">
+          <h3>Core titration pattern</h3>
+          <svg height="160" viewBox="0 0 760 160" xmlns="http://www.w3.org/2000/svg">
+            <rect fill="#d6e4f7" height="78" rx="12" stroke="#1a3a6b" stroke-width="2" width="160" x="20" y="38"/>
+            <text font-size="13" font-weight="bold" text-anchor="middle" x="100" y="61">Known solution</text>
+            <text font-size="11" text-anchor="middle" x="100" y="81">standard / standardised</text>
+            <text font-size="11" text-anchor="middle" x="100" y="99">exact concentration</text>
+
+            <rect fill="#fff3cd" height="78" rx="12" stroke="#f4a261" stroke-width="2" width="160" x="210" y="38"/>
+            <text font-size="13" font-weight="bold" text-anchor="middle" x="290" y="61">Measured volumes</text>
+            <text font-size="11" text-anchor="middle" x="290" y="81">pipette portion</text>
+            <text font-size="11" text-anchor="middle" x="290" y="99">average titre</text>
+
+            <rect fill="#f8d7da" height="78" rx="12" stroke="#b56576" stroke-width="2" width="160" x="400" y="38"/>
+            <text font-size="13" font-weight="bold" text-anchor="middle" x="480" y="61">Balanced equation</text>
+            <text font-size="11" text-anchor="middle" x="480" y="81">gives reacting ratio</text>
+            <text font-size="11" text-anchor="middle" x="480" y="99">n₁ : n₂</text>
+
+            <rect fill="#d8f3dc" height="78" rx="12" stroke="#2d6a4f" stroke-width="2" width="160" x="590" y="38"/>
+            <text font-size="13" font-weight="bold" text-anchor="middle" x="670" y="61">Unknown solution</text>
+            <text font-size="11" text-anchor="middle" x="670" y="81">find concentration</text>
+            <text font-size="11" text-anchor="middle" x="670" y="99">and convert units</text>
+
+            <path d="M180 77 H210" fill="none" marker-end="url(#arrv)" stroke="#555" stroke-width="3"/>
+            <path d="M370 77 H400" fill="none" marker-end="url(#arrv)" stroke="#555" stroke-width="3"/>
+            <path d="M560 77 H590" fill="none" marker-end="url(#arrv)" stroke="#555" stroke-width="3"/>
+            <defs>
+              <marker id="arrv" markerHeight="6" markerWidth="7" orient="auto" refX="6" refY="3">
+                <path d="M0,0 L0,6 L7,3 z" fill="#555"/>
+              </marker>
+            </defs>
+          </svg>
+          <div class="caption">Volumetric analysis is a definite Section A topic. The same logic repeats throughout: known concentration, measured volumes, a balanced equation, and careful end-point detection.</div>
+        </div>
+
+        <div class="struct-table-wrap">
+          <table class="summary-table">
+            <tr><th>Set</th><th>What you need to know</th></tr>
+            <tr><td>Theory</td><td>Concentration units, dilution, standard solutions, primary vs secondary standards, apparatus and titration technique.</td></tr>
+            <tr><td>Acid–base</td><td>Na<sub>2</sub>CO<sub>3</sub>/HCl, water of crystallisation, vinegar/NaOH.</td></tr>
+            <tr><td>Redox / iodometric</td><td>KMnO<sub>4</sub>/Fe<sup>2+</sup>, iron tablets, I<sub>2</sub>/thiosulfate, bleach.</td></tr>
+            <tr><td>Water titrations</td><td>Total hardness with EDTA and dissolved oxygen by the Winkler method.</td></tr>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel exact-import">
+        <h2>Notes</h2>
+        <div class="exact-body">
+
+          <h2>What volumetric analysis is</h2>
+          <p>Volumetric analysis involves reacting two solutions together to find the concentration of one of them. To know the concentration of a solution you need two pieces of information: the amount of solute and the amount of solution. Only the solutes react with each other; the solvent does not react.</p>
+          <p>A solution contains a solute and a solvent. In the experiments in this chapter the solvent is water. The solute may be a solid, such as sodium carbonate, sodium thiosulfate crystals, or iron tablets, or a liquid, such as vinegar or bleach.</p>
+          <div class="defn"><strong>Concentration of a solution</strong> – amount of solute per amount of solution.</div>
+          <p>If there is a high proportion of solute to solvent the solution is concentrated. If there is a low proportion of solute to solvent the solution is dilute.</p>
+
+          <hr class="divider"/>
+
+          <h2>Expressing concentration</h2>
+
+          <h3>% weight per volume, % (w/v)</h3>
+          <p>Grams of solute per 100 cm³ of solution. A 10% (w/v) potassium iodide solution contains 10 g KI per 100 cm³ of solution.</p>
+
+          <h3>% weight per weight, % (w/w)</h3>
+          <p>Grams of solute per 100 g of solution. A 10% (w/w) sodium chloride solution contains 10 g NaCl per 100 g of solution.</p>
+
+          <h3>% volume per volume, % (v/v)</h3>
+          <p>cm³ of solute per 100 cm³ of solution. A 12% (v/v) ethanol solution contains 12 cm³ ethanol per 100 cm³ of solution.</p>
+          <div class="note"><strong>Applied example:</strong> alcohol content in drinks is commonly given as % (v/v). Beer is about 4% (v/v), while spirits such as gin or vodka are often about 40% (v/v).</div>
+
+          <h3>Parts per million, p.p.m.</h3>
+          <p>Used for very small concentrations. In this course, <strong>1 p.p.m. = 1 mg L<sup>−1</sup></strong>.</p>
+
+          <h3>Molarity</h3>
+          <p>The usual unit is moles per litre. A 1 M solution contains 1 mole of solute made up to 1 litre of solution.</p>
+          <div class="note"><strong>Examples:</strong> 1 M NaOH contains 40 g NaOH per litre. 0.5 M NaOH contains 20 g NaOH per litre.</div>
+
+          <h3>Dilution</h3>
+          <p>Stock solutions are concentrated solutions kept for storage and later use. On dilution, water is added, so the concentration changes but the moles of solute do not.</p>
+          <div class="note"><strong>Key point:</strong> moles of solute after dilution = moles of solute before dilution.</div>
+          <div class="rxn-box">C₁V₁ = C₂V₂</div>
+
+          <h3>Colour intensity and colorimetry</h3>
+          <p>Strongly coloured solutions become paler as they are diluted. Potassium manganate(VII) is deep purple due to Mn(+7), and hydrated copper(II) sulfate gives a vivid blue solution due to Cu(+2). Colour intensity can be measured with a <strong>colorimeter</strong>. The technique is called <strong>colorimetry</strong>.</p>
+
+          <hr class="divider"/>
+
+          <h2>Standard solutions, primary standards and secondary standards</h2>
+          <div class="defn"><strong>Standard solution</strong> – a solution of known concentration.</div>
+          <p>There is always one standard solution in a titration: the one whose concentration is already known.</p>
+
+          <div class="defn"><strong>Primary standard</strong> – a solute that can be made into a standard solution directly because it is available in 100% purity, is stable in air, has a high molar mass for accurate weighing, and dissolves readily in water.</div>
+          <p>Most standard solutions are made from primary standards. A carefully weighed mass is made up to a known volume in a volumetric flask, so the concentration can be calculated directly without titration.</p>
+          <div class="defn"><strong>Primary standards on this syllabus:</strong> anhydrous sodium carbonate, Na<sub>2</sub>CO<sub>3</sub>, and ammonium iron(II) sulfate, (NH<sub>4</sub>)<sub>2</sub>SO<sub>4</sub>·FeSO<sub>4</sub>·6H<sub>2</sub>O.</div>
+
+          <div class="defn"><strong>Secondary standard</strong> – a solute that cannot be made into a standard solution directly because it is not available in 100% purity, is not stable in air, has a low molar mass, or does not dissolve readily in water.</div>
+          <div class="defn"><strong>Secondary standards on this syllabus:</strong>
+            <ul>
+              <li><strong>NaOH</strong> – deliquescent, so it absorbs moisture from the air.</li>
+              <li><strong>KMnO<sub>4</sub></strong> – decomposes in strong sunlight, is easily reduced, and does not dissolve readily in water.</li>
+              <li><strong>I<sub>2</sub></strong> – sublimes, so it is not stable in air.</li>
+              <li><strong>Na<sub>2</sub>S<sub>2</sub>O<sub>3</sub></strong> – not available in 100% purity.</li>
+            </ul>
+          </div>
+          <div class="defn"><strong>To standardise</strong> – to find the concentration of a solution by titration or colorimetry.</div>
+
+          <hr class="divider"/>
+
+          <h2>General practical procedures</h2>
+
+          <h3>Preparing a solution in a volumetric flask</h3>
+          <ol>
+            <li>Weigh the solid accurately on a clock glass using an electronic balance.</li>
+            <li>Transfer all of the solute to a beaker and dissolve it using deionised water and a clean glass rod.</li>
+            <li>Pour the solution into the volumetric flask through a funnel.</li>
+            <li>Wash the beaker, funnel and rod with deionised water and add the rinsings to the flask.</li>
+            <li>Remove the funnel and add deionised water until the level is about 1 cm below the mark.</li>
+            <li>Add deionised water drop by drop until the bottom of the meniscus is on the graduation mark at eye level.</li>
+            <li><strong>Stopper and invert 20–30 times</strong> so the solution becomes homogeneous.</li>
+          </ol>
+          <div class="note"><strong>Exam wording:</strong> always say <strong>stopper and invert 20–30 times</strong>. “Shake” on its own is not accepted.</div>
+          <div class="note"><strong>Liquid solute:</strong> if the solute is a liquid, such as vinegar or bleach, measure it with a properly rinsed pipette and transfer it to the volumetric flask before making up to the mark.</div>
+
+          <h3>Pipette</h3>
+          <ul>
+            <li>Used at room temperature only.</li>
+            <li>Wash with deionised water, then rinse with the solution it is to contain to prevent dilution.</li>
+            <li>Draw liquid in with a pipette filler until above the mark.</li>
+            <li>Run off until the bottom of the meniscus is on the mark at eye level.</li>
+            <li>Deliver into the conical flask by touching the tip against the inside of the flask.</li>
+            <li>Do <strong>not</strong> blow out the last drop; it is allowed for in calibration.</li>
+          </ul>
+
+          <h3>Conical flask</h3>
+          <ul>
+            <li>Its narrow neck reduces spillage during swirling.</li>
+            <li>Rinse only with deionised water, not with the solution to be titrated.</li>
+            <li>Swirl continuously during the titration.</li>
+            <li>Drops on the sides can be washed down with deionised water without affecting the result because dilution does not change the reacting moles already present.</li>
+            <li>Stand the flask on a white tile to make the colour change easier to see.</li>
+          </ul>
+
+          <h3>Burette</h3>
+          <ul>
+            <li>Used at room temperature and reads to 0.1 cm³.</li>
+            <li>Clamp vertically to avoid parallax error.</li>
+            <li>Rinse with deionised water, then with the solution it is to contain.</li>
+            <li>Fill above the 0 cm³ mark with the tap closed, then remove the funnel.</li>
+            <li>Open the tap briefly so the jet below the tap fills completely.</li>
+            <li>Read from the bottom of the meniscus, except for KMnO<sub>4</sub>, which is read from the top because it is deeply coloured.</li>
+          </ul>
+          <div class="note"><strong>Usual acid–base setup:</strong> the acid is usually placed in the burette because bases can clog the tap. If a more accurate colour change is obtained the other way around, the setup may be reversed.</div>
+
+          <hr class="divider"/>
+
+          <h2>Aim of a titration</h2>
+          <p>The aim is to find the concentration of one solution. To do that you need:</p>
+          <ul>
+            <li>the volume of the pipetted solution,</li>
+            <li>the average titre from the burette,</li>
+            <li>the concentration of one of the solutions,</li>
+            <li>and the reacting ratio from the balanced equation.</li>
+          </ul>
+
+          <hr class="divider"/>
+
+          <h2>Experiment 1 — Preparing a standard solution of sodium carbonate</h2>
+          <p>This is <strong>not</strong> a titration. It is the preparation of a standard solution for use in later titrations.</p>
+          <div class="result"><strong>Result:</strong> 2.65 g Na<sub>2</sub>CO<sub>3</sub> made up to 250 cm³ gives a <strong>0.1 M</strong> solution.</div>
+          <div class="note"><strong>Calculation:</strong> M<sub>r</sub>(Na<sub>2</sub>CO<sub>3</sub>) = 106, so 2.65 ÷ 106 = 0.025 mol in 250 cm³ = 0.1 mol L<sup>−1</sup>.</div>
+
+          <hr class="divider"/>
+
+          <h2>Experiment 2 — Standardisation of HCl using standard Na<sub>2</sub>CO<sub>3</sub></h2>
+          <div class="callout"><strong>Indicator:</strong> methyl orange. Yellow in alkaline solution, pink at the end-point.</div>
+          <div class="rxn-box">2HCl + Na<sub>2</sub>CO<sub>3</sub> → 2NaCl + H<sub>2</sub>O + CO<sub>2</sub></div>
+
+          <h3>Typical results</h3>
+          <div class="struct-table-wrap">
+            <table class="summary-table">
+              <tr><th>Titration</th><th>Titre (cm³)</th></tr>
+              <tr><td>1st (rough)</td><td>19.9</td></tr>
+              <tr><td>2nd</td><td>19.6</td></tr>
+              <tr><td>3rd</td><td>19.5</td></tr>
+              <tr><td><strong>Average</strong></td><td><strong>19.55</strong></td></tr>
+            </table>
+          </div>
+
+          <h3>Calculation</h3>
+          <p>For HCl: V<sub>1</sub> = 19.55 cm³, M<sub>1</sub> = x, n<sub>1</sub> = 2</p>
+          <p>For Na<sub>2</sub>CO<sub>3</sub>: V<sub>2</sub> = 25.0 cm³, M<sub>2</sub> = 0.1 M, n<sub>2</sub> = 1</p>
+          <ol>
+            <li>Moles of Na<sub>2</sub>CO<sub>3</sub> = 0.1 × 25 / 1000 = 0.0025 mol</li>
+            <li>Moles of HCl = 0.0025 × 2 = 0.0050 mol</li>
+            <li>Molarity of HCl = 0.0050 / 0.01955 = <strong>0.256 M</strong></li>
+            <li>Grams per litre = 0.256 × 36.5 = <strong>9.344 g L<sup>−1</sup></strong></li>
+          </ol>
+          <div class="exam-tip"><strong>Why use only a few drops of indicator?</strong> Indicators are themselves weak acids or weak bases and can take part in the titration. The smallest amount possible is used to minimise their effect.</div>
+
+          <hr class="divider"/>
+
+          <h2>Experiment 3 — Water of crystallisation in Na<sub>2</sub>CO<sub>3</sub>·xH<sub>2</sub>O</h2>
+          <p>The standardised HCl from Experiment 2 is used to determine the percentage water of crystallisation and the value of <em>x</em> in hydrated sodium carbonate crystals.</p>
+          <div class="note"><strong>Method:</strong> find the molarity first, convert that to grams of <strong>anhydrous</strong> Na<sub>2</sub>CO<sub>3</sub>, subtract from the mass of hydrated crystals to get the mass of water, then calculate the percentage and the value of <em>x</em>.</div>
+          <div class="rxn-box">2HCl + Na<sub>2</sub>CO<sub>3</sub> → 2NaCl + H<sub>2</sub>O + CO<sub>2</sub></div>
+
+          <h3>Worked example</h3>
+          <p>4.30 g of washing soda crystals, Na<sub>2</sub>CO<sub>3</sub>·xH<sub>2</sub>O, were made up to 250 cm³. A 25 cm³ portion required 15 cm³ of 0.2 M HCl.</p>
+          <ol>
+            <li>Moles of HCl = 0.2 × 15/1000 = 0.0030 mol</li>
+            <li>Moles of Na<sub>2</sub>CO<sub>3</sub> = 0.0030 / 2 = 0.0015 mol</li>
+            <li>Molarity of Na<sub>2</sub>CO<sub>3</sub> = 0.0015 / 0.025 = 0.06 M</li>
+            <li>Grams per litre of anhydrous Na<sub>2</sub>CO<sub>3</sub> = 0.06 × 106 = 6.36 g L<sup>−1</sup></li>
+            <li>Only 250 cm³ was made, so mass of anhydrous Na<sub>2</sub>CO<sub>3</sub> present = 6.36 ÷ 4 = 1.59 g</li>
+            <li>Mass of water of crystallisation = 4.30 − 1.59 = 2.71 g</li>
+            <li><strong>% water of crystallisation</strong> = (2.71 / 4.30) × 100 = <strong>63.02%</strong></li>
+            <li><strong>x</strong> = (2.71 / 18) ÷ (1.59 / 106) = <strong>10</strong></li>
+          </ol>
+
+          <hr class="divider"/>
+
+          <h2>Experiment 4 — Determination of ethanoic acid in vinegar</h2>
+          <div class="callout"><strong>Weak acid–strong base titration:</strong> phenolphthalein is used. The end-point is <strong>colourless → pink</strong>.</div>
+          <div class="rxn-box">CH<sub>3</sub>COOH + NaOH → CH<sub>3</sub>COONa + H<sub>2</sub>O</div>
+          <p>25 cm³ of vinegar are diluted to 250 cm³ before titration.</p>
+          <div class="note"><strong>Why was the vinegar diluted?</strong> The original vinegar was too concentrated and would require an excessive amount of sodium hydroxide.</div>
+          <div class="note"><strong>Unusual setup:</strong> the vinegar is placed in the conical flask and NaOH in the burette so the easier colour change, colourless to pink, is observed at the end-point.</div>
+
+          <div class="struct-table-wrap">
+            <table class="summary-table">
+              <tr><th>Titration</th><th>Titre (cm³)</th></tr>
+              <tr><td>1st (rough)</td><td>27.5</td></tr>
+              <tr><td>2nd</td><td>27.6</td></tr>
+              <tr><td>3rd</td><td>27.5</td></tr>
+              <tr><td><strong>Average</strong></td><td><strong>27.55</strong></td></tr>
+            </table>
+          </div>
+          <p>Using 25.0 cm³ of 0.1 M NaOH:</p>
+          <ol>
+            <li>Moles of NaOH in 25.0 cm³ = 0.1 × 25/1000 = 0.0025 mol</li>
+            <li>Moles of CH<sub>3</sub>COOH in 27.55 cm³ of diluted vinegar = 0.0025 mol</li>
+            <li>Molarity of diluted vinegar = 0.0025 / 0.02755 = 0.0907 M</li>
+            <li>Molarity of original vinegar = 0.0907 × 10 = <strong>0.907 M</strong></li>
+            <li>As % (w/v): 0.907 × 60 = 54.4 g L<sup>−1</sup> = <strong>5.44% (w/v)</strong></li>
+          </ol>
+
+          <hr class="divider"/>
+
+          <h2>Experiment 5 — Standardisation of KMnO<sub>4</sub></h2>
+          <p>This is a redox titration using ammonium iron(II) sulfate as the primary standard.</p>
+
+          <h3>Ammonium iron(II) sulfate, (NH<sub>4</sub>)<sub>2</sub>SO<sub>4</sub>·FeSO<sub>4</sub>·6H<sub>2</sub>O</h3>
+          <ul>
+            <li>Primary standard.</li>
+            <li>Pipetted into the conical flask.</li>
+            <li>Fe<sup>2+</sup> is easily oxidised by air, so dilute sulfuric acid is added during preparation to prevent aerial oxidation.</li>
+            <li>Its high molar mass improves weighing accuracy.</li>
+          </ul>
+
+          <h3>Potassium manganate(VII), KMnO<sub>4</sub></h3>
+          <ul>
+            <li>Oxidising agent, so it is itself reduced.</li>
+            <li>Secondary standard.</li>
+            <li>Deep purple because of Mn(+7).</li>
+            <li>Always placed in the burette.</li>
+            <li>The titration is carried out in acidic conditions so Mn(+7) is reduced fully to Mn(+2).</li>
+            <li>Mn(+2) acts as an autocatalyst.</li>
+          </ul>
+          <div class="rxn-box">MnO<sub>4</sub><sup>−</sup> + 5Fe<sup>2+</sup> + 8H<sup>+</sup> → Mn<sup>2+</sup> + 5Fe<sup>3+</sup> + 4H<sub>2</sub>O</div>
+          <div class="result"><strong>End-point:</strong> no indicator is needed. The end-point is the first <strong>permanent pink tinge</strong>.</div>
+          <div class="note"><strong>If insufficient acid is present:</strong> Mn(+7) is reduced only to Mn(+4), giving a <strong>brown precipitate of MnO<sub>2</sub></strong>. Add more dilute sulfuric acid.</div>
+          <div class="note"><strong>Do not use HCl or HNO<sub>3</sub> to acidify:</strong> HCl is oxidised by manganate(VII), while HNO<sub>3</sub> is itself an oxidising agent.</div>
+          <div class="exam-tip"><strong>Important:</strong> the standardised KMnO<sub>4</sub> solution should be used immediately in the next titration because its concentration changes on standing.</div>
+
+          <hr class="divider"/>
+
+          <h2>Experiment 6 — Iron in iron tablets</h2>
+          <p>This uses the same chemistry as Experiment 5, but now the Fe<sup>2+</sup> comes from iron tablets.</p>
+          <div class="rxn-box">MnO<sub>4</sub><sup>−</sup> + 5Fe<sup>2+</sup> + 8H<sup>+</sup> → Mn<sup>2+</sup> + 5Fe<sup>3+</sup> + 4H<sub>2</sub>O</div>
+          <ul>
+            <li>Five tablets are weighed to reduce percentage error and to provide enough Fe<sup>2+</sup> for a measurable titre.</li>
+            <li>The tablets are crushed with dilute sulfuric acid to speed up dissolving and prevent aerial oxidation of Fe<sup>2+</sup>.</li>
+            <li>More dilute sulfuric acid is added to the conical flask so Mn(+7) is fully reduced to Mn(+2).</li>
+          </ul>
+
+          <div class="struct-table-wrap">
+            <table class="summary-table">
+              <tr><th>Titration</th><th>Titre (cm³)</th></tr>
+              <tr><td>1st (rough)</td><td>6.2</td></tr>
+              <tr><td>2nd</td><td>6.3</td></tr>
+              <tr><td>3rd</td><td>6.3</td></tr>
+              <tr><td><strong>Average</strong></td><td><strong>6.3</strong></td></tr>
+            </table>
+          </div>
+          <p>Using 0.02 M KMnO<sub>4</sub>:</p>
+          <ol>
+            <li>Moles of KMnO<sub>4</sub> = 0.02 × 6.3/1000 = 1.26 × 10<sup>−4</sup> mol</li>
+            <li>Moles of Fe<sup>2+</sup> = 5 × 1.26 × 10<sup>−4</sup> = 6.30 × 10<sup>−4</sup> mol</li>
+            <li>Molarity of Fe<sup>2+</sup> solution = 6.30 × 10<sup>−4</sup> / 0.025 = <strong>0.0252 M</strong></li>
+          </ol>
+          <div class="note"><strong>Read carefully in exam questions:</strong> sometimes you are asked for iron, sometimes for iron(II) sulfate.</div>
+
+          <hr class="divider"/>
+
+          <h2>Experiment 7 — Sodium thiosulfate and iodine titrations</h2>
+
+          <h3>Sodium thiosulfate, Na<sub>2</sub>S<sub>2</sub>O<sub>3</sub></h3>
+          <ul>
+            <li>Reducing agent.</li>
+            <li>Secondary standard.</li>
+            <li>Placed in the burette.</li>
+          </ul>
+
+          <h3>Iodine, I<sub>2</sub></h3>
+          <ul>
+            <li>Non-polar and almost insoluble in water.</li>
+            <li>Secondary standard because it sublimes and is not stable in air.</li>
+            <li>Kept in aqueous solution by using <strong>excess potassium iodide</strong>.</li>
+          </ul>
+          <div class="rxn-box">I<sub>2</sub> + 2S<sub>2</sub>O<sub>3</sub><sup>2−</sup> → 2I<sup>−</sup> + S<sub>4</sub>O<sub>6</sub><sup>2−</sup></div>
+
+          <h3>Iodometric end-point</h3>
+          <ol>
+            <li>The iodine solution in the conical flask starts <strong>red/brown</strong>.</li>
+            <li>Add sodium thiosulfate until the solution becomes <strong>straw-yellow</strong>.</li>
+            <li>Add a few drops of starch; the solution turns <strong>blue-black</strong>.</li>
+            <li>Continue the titration until the solution becomes <strong>colourless</strong>.</li>
+          </ol>
+          <div class="result"><strong>Colour sequence:</strong> red/brown → straw-yellow → blue-black → colourless.</div>
+          <div class="note"><strong>Why is starch added near the end?</strong> If added too early, the iodine–starch complex is too concentrated and too stable, making the end-point less accurate.</div>
+
+          <hr class="divider"/>
+
+          <h2>Experiment 8 — Percentage (w/v) of hypochlorite in bleach</h2>
+          <p>Bleach contains hypochlorite ions, ClO<sup>−</sup>, usually in the form of NaClO. The hypochlorite ion is an oxidising agent and liberates iodine from excess iodide in a 1:1 ratio. The iodine is then titrated with standard sodium thiosulfate.</p>
+          <div class="rxn-box">ClO<sup>−</sup> + 2I<sup>−</sup> + 2H<sup>+</sup> → Cl<sup>−</sup> + I<sub>2</sub> + H<sub>2</sub>O</div>
+          <div class="rxn-box">I<sub>2</sub> + 2S<sub>2</sub>O<sub>3</sub><sup>2−</sup> → 2I<sup>−</sup> + S<sub>4</sub>O<sub>6</sub><sup>2−</sup></div>
+          <div class="note"><strong>Why is the bleach diluted?</strong> Original bleach is too concentrated and would require an excessive amount of sodium thiosulfate.</div>
+          <div class="note"><strong>Why must KI be in excess?</strong> To ensure all of the oxidising agent is reduced and the maximum amount of iodine is liberated, and to keep the iodine in aqueous solution.</div>
+
+          <hr class="divider"/>
+
+          <h2>Water titration 1 — Total hardness in a water sample using EDTA</h2>
+          <p>Hardness in water is caused mainly by calcium and magnesium ions from hydrogencarbonates or sulfates. In this titration the hardness is expressed, for simplicity, as if it were all due to <strong>CaCO<sub>3</sub></strong>.</p>
+          <div class="rxn-box">M<sup>2+</sup> + H<sub>2</sub>Y<sup>2−</sup> → MY<sup>2−</sup> + 2H<sup>+</sup></div>
+          <p>Here M<sup>2+</sup> represents the ions causing hardness, and H<sub>2</sub>Y<sup>2−</sup> represents the EDTA reagent. EDTA reacts in a <strong>1:1 ratio</strong> with the hardness ions.</p>
+          <ul>
+            <li><strong>Indicator:</strong> Eriochrome Black T (or Solochrome Black T).</li>
+            <li><strong>Colour change:</strong> wine-red → blue.</li>
+            <li><strong>Special condition:</strong> add a <strong>buffer of pH 10</strong> because the end-point is difficult to detect unless the pH is controlled.</li>
+            <li><strong>Storage note:</strong> EDTA is kept in plastic because it can extract metal ions from glass over time.</li>
+          </ul>
+
+          <div class="struct-table-wrap">
+            <table class="summary-table">
+              <tr><th>Titration</th><th>Titre (cm³)</th></tr>
+              <tr><td>1st (rough)</td><td>15.4</td></tr>
+              <tr><td>2nd</td><td>15.2</td></tr>
+              <tr><td>3rd</td><td>15.3</td></tr>
+              <tr><td><strong>Average</strong></td><td><strong>15.25</strong></td></tr>
+            </table>
+          </div>
+          <p>Using 25.0 cm³ of water sample and 0.01 M EDTA:</p>
+          <ol>
+            <li>Moles of EDTA = 0.01 × 15.25/1000 = 1.525 × 10<sup>−4</sup> mol</li>
+            <li>Moles of hardness, as CaCO<sub>3</sub>, in 25.0 cm³ = 1.525 × 10<sup>−4</sup> mol</li>
+            <li>Molarity = 1.525 × 10<sup>−4</sup> / 0.025 = 0.00610 M</li>
+            <li>g L<sup>−1</sup> as CaCO<sub>3</sub> = 0.00610 × 100 = 0.610 g L<sup>−1</sup></li>
+            <li>ppm = 610 mg L<sup>−1</sup> = <strong>610 p.p.m.</strong></li>
+          </ol>
+          <div class="result"><strong>Total hardness:</strong> <strong>610 p.p.m. as CaCO<sub>3</sub></strong>.</div>
+
+          <hr class="divider"/>
+
+          <h2>Water titration 2 — Dissolved oxygen using the Winkler method</h2>
+          <p>This is a redox titration used to determine dissolved oxygen in water.</p>
+          <ol>
+            <li>Add concentrated manganese(II) sulfate solution and alkaline potassium iodide deep into a full bottle of water sample.</li>
+            <li>A white precipitate of manganese(II) hydroxide forms first and rapidly turns brown in the presence of dissolved oxygen.</li>
+            <li>Add concentrated sulfuric acid to dissolve the brown precipitate and liberate iodine.</li>
+            <li>Titrate the iodine with standard sodium thiosulfate using starch near the end-point.</li>
+          </ol>
+          <div class="rxn-box">I<sub>2</sub> + 2S<sub>2</sub>O<sub>3</sub><sup>2−</sup> → 2I<sup>−</sup> + S<sub>4</sub>O<sub>6</sub><sup>2−</sup></div>
+          <div class="note"><strong>Key ratio:</strong> 1 mole O<sub>2</sub> produces 2 moles I<sub>2</sub>.</div>
+          <div class="note"><strong>Indicator timing:</strong> add starch only when the solution has become straw-yellow.</div>
+          <div class="result"><strong>Colour sequence:</strong> brown precipitate → red/brown iodine solution → straw-yellow → blue-black after starch → colourless at the end-point.</div>
+
+          <div class="struct-table-wrap">
+            <table class="summary-table">
+              <tr><th>Titration</th><th>Titre (cm³)</th></tr>
+              <tr><td>1st (rough)</td><td>5.9</td></tr>
+              <tr><td>2nd</td><td>5.7</td></tr>
+              <tr><td>3rd</td><td>5.6</td></tr>
+              <tr><td><strong>Average</strong></td><td><strong>5.65</strong></td></tr>
+            </table>
+          </div>
+          <p>Using 100 cm³ of water sample and 0.02 M sodium thiosulfate:</p>
+          <ol>
+            <li>Moles of thiosulfate = 0.02 × 5.65/1000 = 1.13 × 10<sup>−4</sup> mol</li>
+            <li>Moles of I<sub>2</sub> = 1.13 × 10<sup>−4</sup> / 2 = 5.65 × 10<sup>−5</sup> mol</li>
+            <li>Moles of O<sub>2</sub> = 5.65 × 10<sup>−5</sup> / 2 = 2.825 × 10<sup>−5</sup> mol in 100 cm³</li>
+            <li>Moles per litre = 2.825 × 10<sup>−4</sup> mol L<sup>−1</sup></li>
+            <li>Mass concentration = 2.825 × 10<sup>−4</sup> × 32 = 0.00904 g L<sup>−1</sup></li>
+            <li><strong>Dissolved oxygen = 9.04 p.p.m.</strong></li>
+          </ol>
+          <div class="result"><strong>Dissolved oxygen content:</strong> <strong>9.04 p.p.m.</strong></div>
+          <div class="exam-tip"><strong>Important:</strong> the Winkler method does not work for chlorinated water, such as tap water, because chlorine is an oxidising agent and would liberate extra iodine, giving a falsely high result.</div>
+
+          <hr class="divider"/>
+
+          <h2>Final checklist</h2>
+          <ul>
+            <li>Know the concentration units and be able to convert between them.</li>
+            <li>Know why each piece of apparatus is rinsed the way it is.</li>
+            <li>Learn the indicators and colour changes for each titration.</li>
+            <li>Know the balanced equations and reacting ratios.</li>
+            <li>Do not forget the two Water titrations: EDTA hardness and Winkler dissolved oxygen.</li>
+          </ul>
+
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="../script.js"></script>
+</body>
+</html>
